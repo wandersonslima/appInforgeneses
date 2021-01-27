@@ -1,0 +1,22 @@
+<div>
+    <table class="small-offset-2 small-8 columns">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Criação</th>
+        </tr>
+        <tr ng-repeat="(key, item) in searchTable | orderBy: filter.SortColumn: true">
+            <td>{{key + 1}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.categoria}}</td>
+            <td>{{item.descricao}}</td>
+            <td>{{item.criacao}}</td>
+            
+        </tr>
+
+
+    </table>
+</div>

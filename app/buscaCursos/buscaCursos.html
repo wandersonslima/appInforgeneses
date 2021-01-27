@@ -1,0 +1,25 @@
+<div>
+    <table class="small-offset-2 small-8 columns">
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>descricao</th>
+            <th>preco</th>
+            <th>criacao</th>
+            <th>categoria</th>
+        </tr>
+        <tr ng-repeat="(id, item) in searchTable | orderBy: filter.SortColumn: true">
+            <td>{{id + 1}}</td>
+            <th>{{item.id}}</th>
+            <td>{{item.nome}}</td>
+            <td>{{item.descricao}}</td>
+            <td>{{item.preco|number: 2}}</td>
+            <td>{{item.criacao}}</td>
+            <td>{{item.categoria}}</td>
+            <td><a ng-click="selectType(item)">Select</a></td>
+        </tr>
+
+
+    </table>
+</div>
