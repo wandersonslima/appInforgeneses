@@ -7,22 +7,12 @@
 
             // <editor-fold defaultstate="collapsed" desc="View models, scope items">
 
-            $scope.title = "Cursos";
-            $scope.menuItems = buscaService.getMenuItems();
+            $scope.title = "Resultado da busca";
             $scope.searchString = "";
             $scope.searchTable;
-
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="View model functions">
-
-            /*
-             * Menu items logic, sets active class and navigates to new view
-             */
-            $scope.navigate = function (index) {
-                $scope.menuItems = buscaService.setMenuToActive(index);
-            };
-
             /*
              * Get all data from tables
              */
@@ -32,7 +22,7 @@
                     
                     buscaService.getAll($scope.searchString ).success(function (data) {
                         if(data.length > 0)
-                            $scope.searchTable = data;
+                            $scope.buscaCurso = data;
                         $location.path('buscaCursos');
                     }).error(function (data) {
                         throw Error(data);
@@ -42,14 +32,13 @@
                 else{
                     
                     buscaService.getWhere($scope.searchString).success(function (data) {
-                        $scope.searchTable = data;
+                        $scope.buscaCurso = data;
                         $location.path('buscaCursos');
                     }).error(function (data) {
                         throw Error(data);
                     });
                     console.info("else busca");
                 }
-                
                     
             };
            /*

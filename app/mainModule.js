@@ -20,7 +20,7 @@
                         .when("/lista", 
                         {
                             templateUrl: 'app/listaCursos/lista.html',
-                            controller: 'ListaController'
+                            controller: 'listaController'
                         })
                         .otherwise({redirectTo: '/lista'});
 

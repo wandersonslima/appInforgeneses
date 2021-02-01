@@ -1,4 +1,5 @@
 <div>
+    <div><h3>{{title}}</h3></div>
     <table class="small-offset-2 small-8 columns">
         <tr>
             <th>Id</th>
@@ -8,11 +9,12 @@
             <th>Preço</th>
             <th>Criação</th>
         </tr>
-        <tr ng-repeat="(key, item) in searchTable | orderBy: filter.SortColumn: true">
-            <td>{{key + 1}}</td>
+        <tr ng-repeat="(key, item) in listaCursos | orderBy: filter.SortColumn: true">
+            <td>{{item.id}}</td>
             <td>{{item.nome}}</td>
             <td>{{item.categoria}}</td>
             <td>{{item.descricao}}</td>
+            <td>R${{item.preco|number: 2}}</td>
             <td>{{item.criacao}}</td>
             
         </tr>

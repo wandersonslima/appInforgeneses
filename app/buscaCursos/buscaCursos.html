@@ -1,4 +1,13 @@
-<div>
+<div ng-controller="buscaController">
+    <div class="row collapse top-buffer">
+        <div class="small-1 columns right">
+            <button ng-click="search()" class="left button postfix">Busca</button>
+        </div>
+        <div class="small-3 columns right">
+            <input type="text" placeholder="Busca" ng-model="searchString">
+        </div>
+    </div>
+    <div><h3>{{title}}</h3></div>
     <table class="small-offset-2 small-8 columns">
         <tr>
             <th>#</th>
@@ -9,12 +18,12 @@
             <th>criacao</th>
             <th>categoria</th>
         </tr>
-        <tr ng-repeat="(id, item) in searchTable | orderBy: filter.SortColumn: true">
+        <tr ng-repeat="(id, item) in buscaCurso | orderBy: filter.SortColumn: true">
             <td>{{id + 1}}</td>
             <th>{{item.id}}</th>
             <td>{{item.nome}}</td>
             <td>{{item.descricao}}</td>
-            <td>{{item.preco|number: 2}}</td>
+            <td>{{R$item.preco|number: 2}}</td>
             <td>{{item.criacao}}</td>
             <td>{{item.categoria}}</td>
             <td><a ng-click="selectType(item)">Select</a></td>
