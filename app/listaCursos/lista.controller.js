@@ -5,15 +5,12 @@
         '$scope', '$location', 'listaService',
         function ($scope, $location, listaService) {
 
-            // <editor-fold defaultstate="collapsed" desc="View models, scope items">
-
             $scope.title = "Cursos";
-
-            // </editor-fold>
-
-            // <editor-fold defaultstate="collapsed" desc="View model functions">
+            
+            /*
+             * Lista todos os cursos e ordena por data de criação
+             */
             listaService.getAll().success(function (data) {
-                $scope.listaCursos = data;
                 if(data.length > 0)
                     $scope.listaCursos = data;
                 $location.path('lista');
@@ -22,8 +19,17 @@
                 console.info("erro");
             });
             console.info("Lista todos os cursos");
-            // </editor-fold>
+
+            /*
+            * Redireciona para a pagina de descrição
+            */
+           $scope.selectType = function(data){
+             
+            $location.path('descCursos/' + data.id);
+            console.info("selecttype");
+            };
         }
+        
     ]);
 
 })(angular);

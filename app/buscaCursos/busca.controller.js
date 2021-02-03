@@ -41,15 +41,14 @@
                 }
                     
             };
-           /*
+                       /*
             * Redireciona para a pagina de descrição
             */
-            $scope.selectType = function(data){
+           $scope.selectType = function(data){
              
-               $location.path('' + data.id);
+            $location.path('descCursos/' + data.id);
+            console.info("selecttype");
             };
-            
-            // </editor-fold>
         }
     ]);
 })(angular);

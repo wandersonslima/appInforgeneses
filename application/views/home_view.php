@@ -6,8 +6,13 @@
         <link href="assets/bower_components/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body ng-app="mainModule">
-        <div ng-controller="buscaController">
+        <div>
             <nav class="top-bar" data-topbar role="navigation">
+                <ul class="title-area">
+                        <li class="name">
+                            <h1><a href="#/home">Home</a></h1>
+                        </li>
+                </ul>
                 <ul class="title-area">
                     <li class="name">
                         <h1><a href="#/lista">Cursos</a></h1>
@@ -20,7 +25,7 @@
                 </ul>
                 <ul class="title-area">
                     <li class="name">
-                        <h1><a href="#/home">Home</a></h1>
+                        <h1><a href="#/descCursos">Descrição</a></h1>
                     </li>
                 </ul>
             </nav>
@@ -56,6 +61,10 @@
     <!-- listaCursos -->
     <script src="app/listaCursos/lista.controller.js" type="text/javascript"></script>
     <script src="app/listaCursos/lista.service.js" type="text/javascript"></script>
+
+    <!-- descCursos -->
+    <script src="app/descCursos/desc.controller.js" type="text/javascript"></script>
+    <script src="app/descCursos/desc.service.js" type="text/javascript"></script>
 
     <!-- Formatters -->
     <script src="app/formatters/number.formatter.js" type="text/javascript"></script>

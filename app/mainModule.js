@@ -22,6 +22,11 @@
                             templateUrl: 'app/listaCursos/lista.html',
                             controller: 'listaController'
                         })
+                        .when("/descCursos/:id",
+                        {
+                            templateUrl: 'app/descCursos/descCursos.html',
+                            controller: 'descController'
+                        })
                         .otherwise({redirectTo: '/lista'});
 
 

@@ -21,12 +21,11 @@
         <tr ng-repeat="(id, item) in buscaCurso | orderBy: filter.SortColumn: true">
             <td>{{id + 1}}</td>
             <th>{{item.id}}</th>
-            <td>{{item.nome}}</td>
+            <td><a ng-click="selectType(item)">{{item.nome}}</a></td>
             <td>{{item.descricao}}</td>
             <td>{{R$item.preco|number: 2}}</td>
             <td>{{item.criacao}}</td>
             <td>{{item.categoria}}</td>
-            <td><a ng-click="selectType(item)">Select</a></td>
         </tr>
 
 

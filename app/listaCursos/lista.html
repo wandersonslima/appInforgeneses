@@ -11,7 +11,7 @@
         </tr>
         <tr ng-repeat="(key, item) in listaCursos | orderBy: filter.SortColumn: true">
             <td>{{item.id}}</td>
-            <td>{{item.nome}}</td>
+            <td><a ng-click="selectType(item)">{{item.nome}}</a></td>
             <td>{{item.categoria}}</td>
             <td>{{item.descricao}}</td>
             <td>R${{item.preco|number: 2}}</td>

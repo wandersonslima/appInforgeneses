@@ -13,9 +13,5 @@
                         return $http.get(url + "all/format/json");
                     };
                 }
-
-
             ]);
-
-
 })(angular);
