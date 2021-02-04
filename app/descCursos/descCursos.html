@@ -1,25 +1,19 @@
 <div>
     <div><h3>{{title}}</h3></div>
     <div>{{descCurso.nome}}</div>
-    <div><pre ng-model="descCurso.nome"></pre></div>
+    <div><p></p><img src="{{descCurso.src_img}}"></div>
     <table class="small-offset-2 small-8 columns">
         <tr>
-            <th>#</th>
-            <th>ID</th>
             <th>Nome</th>
-            <th>descricao</th>
-            <th>preco</th>
-            <th>criacao</th>
-            <th>categoria</th>
+            <th>Descricao</th>
+            <th>Categoria</th>
+            <th>Preço</th>
         </tr>
         <tr>
-            <td>{{ + 1}}</td>
-            <th>{{descCurso.id}}</th>
             <td>{{descCurso.nome}}</td>
             <td>{{descCurso.descricao}}</td>
-            <td>R${{descCurso.preco|number: 2}}</td>
-            <td>{{descCurso.criacao}}</td>
             <td>{{descCurso.categoria}}</td>
+            <td>R${{descCurso.preco|number: 2}}</td>
         </tr>
     </table>
 </div>

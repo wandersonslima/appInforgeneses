@@ -10,24 +10,15 @@
     <div><h3>{{title}}</h3></div>
     <table class="small-offset-2 small-8 columns">
         <tr>
-            <th>#</th>
-            <th>ID</th>
+            <th></th>
             <th>Nome</th>
-            <th>descricao</th>
-            <th>preco</th>
-            <th>criacao</th>
-            <th>categoria</th>
+            <th>Categoria</th>
+            <th>Preço</th>
         </tr>
-        <tr ng-repeat="(id, item) in buscaCurso | orderBy: filter.SortColumn: true">
-            <td>{{id + 1}}</td>
-            <th>{{item.id}}</th>
+        <tr ng-repeat="(key, item) in buscaCurso | orderBy: filter.SortColumn: true">
+            <td><img src="{{item.src_img}}"></td>
             <td><a ng-click="selectType(item)">{{item.nome}}</a></td>
-            <td>{{item.descricao}}</td>
-            <td>{{R$item.preco|number: 2}}</td>
-            <td>{{item.criacao}}</td>
             <td>{{item.categoria}}</td>
-        </tr>
-
-
+            <td>R$ {{item.preco|number: 2}}</td>
     </table>
 </div>
