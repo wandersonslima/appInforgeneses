@@ -12,6 +12,12 @@
                     this.getAll = function () {
                         return $http.get(url + "all/format/json");
                     };
+                    /**
+                     * Busca por nome
+                     */
+                    this.getWhere = function (search) {
+                        return $http.get(url + "where/name/" + search + "/format/json");
+                    };
                 }
             ]);
 })(angular);

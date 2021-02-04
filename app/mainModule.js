@@ -9,9 +9,6 @@
             .config(function ($routeProvider) {
 
                 $routeProvider
-                        .when("/buscaCursos",{
-                           templateUrl: 'app/buscaCursos/buscaCursos.html'
-                        })
                         .when("/home", 
                         {
                             templateUrl: 'app/home/home.html',

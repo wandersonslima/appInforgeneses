@@ -18,16 +18,6 @@
                         <h1><a href="#/lista">Cursos</a></h1>
                     </li>
                 </ul>
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="#/buscaCursos">Busca Cursos</a></h1>
-                    </li>
-                </ul>
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="#/descCursos">Descrição</a></h1>
-                    </li>
-                </ul>
             </nav>
 
             <div ng-view>
@@ -35,7 +25,7 @@
             </div>
 
             <footer class="small-offset-1 small-11 columns footer bottom" >
-              Inforgeneses
+              <h2><p>Inforgeneses</p></h2>
             </footer>
         </div>
 
@@ -50,10 +40,6 @@
     <script src="assets/bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
     <script src="assets/bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
     <script src="app/mainModule.js" type="text/javascript"></script>
-
-    <!-- buscaCursos -->
-    <script src="app/buscaCursos/busca.service.js" type="text/javascript"></script>
-    <script src="app/buscaCursos/busca.controller.js" type="text/javascript"></script>
 
     <!-- home -->
     <script src="app/home/home.controller.js" type="text/javascript"></script>

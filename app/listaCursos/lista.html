@@ -1,5 +1,13 @@
 <div></div>
-    <div><h3>{{title}}</h3></div>
+    <div><p><h3>{{title}}</h3></p></div>
+    <div class="row collapse top-buffer">
+        <div class="small-1 columns right">
+            <button ng-click="search()" class="left button postfix">Busca</button>
+        </div>
+        <div class="small-3 columns right">
+            <input type="text" placeholder="Busca" ng-model="searchString">
+        </div>
+    </div>
     <table class="small-offset-2 small-8 columns">
         <tr>
             <th></th>
