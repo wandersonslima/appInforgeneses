@@ -6,7 +6,6 @@ class Cursos_model extends CI_Model {
     function __construct()
     {
         parent:: __construct();
-        //$this->load->database();
         $this->load->dbutil();
         $this->load->dbforge();
     }
@@ -16,8 +15,7 @@ class Cursos_model extends CI_Model {
        $this->db->from('cursos');
        $query = $this->db->get();
 
-       //return $query->result();
-    
+     
        return json_encode($query->result());
     }
     public function getAll() {
@@ -25,7 +23,6 @@ class Cursos_model extends CI_Model {
         $query = $this->db->get('cursos');
 
         return $query->result();
-        //return json_encode($query->result());
     }
     public function getWhere($name) {
 

@@ -7,7 +7,7 @@
 
                     var url = 'index.php/Api_Rest/';
 
-                    // Get table data by id
+                    //Busca dados da tabela pelo ID
                     this.getById = function(id){
                         return $http.get(url + "byId/id/" + id + "/format/json");
                     };
